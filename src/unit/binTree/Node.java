@@ -1,5 +1,10 @@
 package unit.binTree;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class Node<T extends BinTreeModel> {
 
 	private T value = null;
@@ -168,6 +173,23 @@ public class Node<T extends BinTreeModel> {
 		}
 
 		return leftDepth < rightDepth ? rightDepth : leftDepth;
+	}
+	
+	public List<List<Node<? extends BinTreeModel>>> getNodeList() {
+		List<List<Node< ? extends BinTreeModel>>> listLeft = new ArrayList<List<Node<? extends BinTreeModel>>>();
+		List<List<Node< ? extends BinTreeModel>>> listRight = new ArrayList<List<Node<? extends BinTreeModel>>>();
+		listLeft.add(getChildNodeList());
+		
+		
+		return null;	
+	}
+	
+	private List<Node<? extends BinTreeModel>> getChildNodeList() {
+		List<Node<? extends BinTreeModel>> row = new ArrayList<Node<? extends BinTreeModel>>();
+		row.add(leftNode);
+		row.add(rightNode);
+		
+		return row;
 	}
 	
 	@Override

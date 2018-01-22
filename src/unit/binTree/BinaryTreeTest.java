@@ -2,6 +2,9 @@ package unit.binTree;
 
 import static org.junit.Assert.*;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,6 +34,13 @@ public class BinaryTreeTest {
 	@Test
 	public void shouldPrintBinTree() {
 		//System.out.println(binTree.toString());
+	}
+	
+	@Test
+	public void test() {
+		binTree.sort();
+		List<Node<? extends BinTreeModel>> list = Collections.singletonList(binTree.getRoot());
+		System.out.println(list);
 	}
 	
 	@Test
